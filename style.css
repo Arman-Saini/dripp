@@ -1,0 +1,393 @@
+
+@font-face {
+    font-family: "drippy";
+    src: url("../../FigmaAssets/cardin_script/CardinDEMO-Script.otf");
+}
+@font-face {
+    font-family: 'longg';
+    src: url("../../FigmaAssets/go_long/golong.otf");
+}
+@font-face {
+    font-family: "chuck";
+    src: url("../../FigmaAssets/converse-allstars/COVEARG_.ttf");
+}
+@font-face {
+    font-family: "coolvetica";
+    src: url("../../FigmaAssets/coolvetica/Coolvetica\ Rg.otf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.container{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+}
+.navBar{
+    background-color: beige;
+    height: 60px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.drippName{
+    margin-left: 10px;
+    font-family: "drippy";
+    padding-left: 20px;
+    font-size: 80px;
+    padding-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+    padding-right: 20px;
+    border: 2px solid black;
+}
+.drippName:hover{
+    background: black;
+    transform: scale(1.1);
+    color: beige;
+    cursor: pointer;
+}
+.rightSide{
+    margin-right: 10px;
+    width: 20%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+}
+.rightSide button{
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-left: 2px solid black;
+    padding: 10px;
+    font-family: "longg";
+    font-size: 25px;
+    padding-top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.rightSide > .about{
+    border-right: 2px solid black;
+}
+.rightSide button:hover{
+    transform: scale(1.1);
+    background-color: black;
+    color: beige;
+    cursor: pointer;
+}
+.rightSide button:active{
+    transform: scale(0.8);
+}
+.shoePages{
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    width:300vw;
+    height: calc(100% - 60px);
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.belowBarChuck70{
+    flex: 0 0 100vw;
+    background-color:rgb(211, 190, 153);
+    top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.shoePic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.shoePic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    padding-bottom: 120px;
+}
+.shoeInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.shoeName{
+    padding-left: 10px;
+    font-family: "coolvetica";
+    font-size: 100px;
+    position: relative;
+    top: -100px;
+    background-color: black;
+    color: beige;
+}
+.brand{
+    font-family: "chuck";
+    font-size: 30px;
+    position: relative;
+    top: -100px;
+    padding-left: 15px;
+    background-color: beige;
+}
+.desc{
+    font-family: "coolvetica";
+    font-size: 30px;
+}
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.14s;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+
+/* .container:hover .cursor{
+    transform: scale(6);
+} */
+
+/* VooDoo Section */
+.belowBarVooDoo{
+    flex: 0 0 100vw;
+    background-color: rgb(202, 164, 112);
+    top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.VooDooPic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.VooDooPic img{
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.5s ease-in-out;
+}
+.VooDooInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.VooDooName{
+    padding-left: 10px;
+    font-family: "coolvetica";
+    font-size: 100px;
+    position: relative;
+    top: -100px;
+    background-color: black;
+    color: rgb(169, 229, 112);
+}
+.VooDooBrand{
+    display: flex;
+    justify-content: left;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(175, 148, 100);
+    position: relative;
+    top: -100px;
+    padding: 7px;
+}
+.VooDooBrand img{
+    height: 100%;
+    object-fit: contain;
+}
+.VooDooDesc{
+    font-family: "coolvetica";
+    font-size: 30px;
+}
+/* Dunk Section */
+.belowBarDunk{
+    flex: 0 0 100vw;
+    background-color: #c9a988;
+    top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.DunkPic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.DunkPic img{
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.5s ease-in-out;
+    transform: scale(0.95);
+    padding-bottom: 135px;
+}
+.DunkInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.DunkName{
+    padding-left: 10px;
+    font-family: "coolvetica";
+    font-size: 100px;
+    position: relative;
+    top: -100px;
+    background-color: black;
+    color: #ddd6ba;
+}
+.DunkBrand{
+    display: flex;
+    justify-content: left;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(175, 148, 100);
+    position: relative;
+    top: -100px;
+    padding: 7px;
+}
+.DunkBrand img{
+    height: 100%;
+    object-fit: contain;
+}
+.DunkDesc{
+    font-family: "coolvetica";
+    font-size: 30px;
+}
+/* Samba Section */
+.belowBarSamba{
+    flex: 0 0 100vw;
+    background-color:rgb(85, 71, 67);
+    top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.SambaPic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.SambaPic img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.5s ease-in-out;
+    padding-bottom: 110px;
+    transform: scale(0.90);
+}
+.SambaInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.SambaName{
+    padding-left: 10px;
+    font-family: "coolvetica";
+    font-size: 100px;
+    position: relative;
+    top: -100px;
+    background-color: black;
+    color: rgb(226, 229, 238);
+}
+.Sambabrand{
+    font-family: "coolvetica";
+    font-size: 30px;
+    position: relative;
+    top: -100px;
+    padding-left: 15px;
+    background-color: rgb(165, 158, 155);
+}
+.Sambadesc{
+    font-family: "coolvetica";
+    font-size: 30px;
+    color: rgb(216, 218, 225);
+}
+.change{
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    width: 250px;
+    height: 120px;
+    bottom: 60px;
+    right: 60px;
+}
+.left{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.left img{
+    transform: scale(1.3);
+    padding-right: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.2s ease-in-out;
+}
+ .left img:hover{
+    transform: scale(1.5);
+}
+.right{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+}
+.right img{
+    transform: scale(1.3);
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.2s ease-in-out;
+}
+.right img:hover{
+    transform: scale(1.5);
+}
+.left img:active{
+    transform: scale(0.8);
+}
+.right img:active{
+    transform: scale(0.8);
+}
