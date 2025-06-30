@@ -1,20 +1,20 @@
-
 @font-face {
     font-family: "drippy";
-    src: url("../../FigmaAssets/cardin_script/CardinDEMO-Script.otf");
+    src: url("FigmaAssets/cardin_script/CardinDEMO-Script.otf");
 }
 @font-face {
     font-family: 'longg';
-    src: url("../../FigmaAssets/go_long/golong.otf");
+    src: url("FigmaAssets/go_long/golong.otf");
 }
 @font-face {
     font-family: "chuck";
-    src: url("../../FigmaAssets/converse-allstars/COVEARG_.ttf");
+    src: url("FigmaAssets/converse-allstars/COVEARG_.ttf");
 }
 @font-face {
     font-family: "coolvetica";
-    src: url("../../FigmaAssets/coolvetica/Coolvetica\ Rg.otf");
+    src: url("FigmaAssets/coolvetica/Coolvetica Rg.otf");
 }
+
 *{
     margin: 0;
     padding: 0;

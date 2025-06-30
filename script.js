@@ -1,8 +1,27 @@
 const cursor = document.querySelector(".cursor");
+
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+const speed = 0.1; // Smaller = slower, smoother
+
 document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+  mouseX = e.clientX;
+  mouseY = e.clientY;
 });
+
+function animateCursor() {
+  // Smoothly interpolate toward target mouse position
+  currentX += (mouseX - currentX) * speed;
+  currentY += (mouseY - currentY) * speed;
+
+  cursor.style.left = `${currentX}px`;
+  cursor.style.top = `${currentY}px`;
+
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor(); // Start the animation loop
+
 
 const container = document.querySelector(".shoePages");
 const leftBtn = document.querySelector(".left");
