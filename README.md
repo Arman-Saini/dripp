@@ -1,3 +1,9 @@
+/*
+yeah, the readme is AI generated as I needed some help hosting this website, what you gon' do bout it?
+*/
+
+No fucking way did I just put /**/ in MARKDOWN FILE, LMAO
+
 # dripp
 
 Animated sneaker showcase rebuilt with React and Next.js.
